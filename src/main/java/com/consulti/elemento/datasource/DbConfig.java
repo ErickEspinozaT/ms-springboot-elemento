@@ -79,7 +79,7 @@ public class DbConfig {
   @Bean(name = "ElementoEMFactory")
   public LocalContainerEntityManagerFactoryBean entityManagerFactoryMonitoreo(EntityManagerFactoryBuilder builder,
       @Qualifier("dsElemento") DataSource dsElemento) {
-    return builder.dataSource(dsElemento).properties(hibernateProperties()).packages("com.consulti.consulti.entity")
+    return builder.dataSource(dsElemento).properties(hibernateProperties()).packages("com.consulti.elemento.entity")
         .persistenceUnit("dbElemento").build();
   }
 
